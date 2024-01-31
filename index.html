@@ -1,52 +1,34 @@
-<!DOCTYPE html>
-<head>
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>小説用</title>
   <style>
-    body{
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    font-size: 150%;
-  }
-  textarea{
-    font-size: 150%;
-    font-family: serif;
-  }
+    *{
+      background: white;
+      color: black;
+      -webkit-writing-mode: vertical-rl;
+    }
+
+    button{
+      font-family: serif;
+    }
+    .area{
+      border: 1px solid black;
+    }
+
+    .textarea{
+      background: white;
+      color: black;
+      font-size: 50px;
+      font-family: serif;
+      padding: 0;
+    }
+    @page { size:landscape; }
+
   </style>
-  <script>
-  var obj1 = document.getElementById("selfile");
-
-//ダイアログでファイルが選択された時
-obj1.addEventListener("change",function(evt){
-
-  var file = evt.target.files;
-
-  //FileReaderの作成
-  var reader = new FileReader();
-  //テキスト形式で読み込む
-  reader.readAsText(file[0]);
-
-  //読込終了後の処理
-  reader.onload = function(ev){
-    //テキストエリアに表示する
-    document.getElementById('txt').value = reader.result;
-  }
-},false);
-
-  function save() {
-      const txt = document.getElementById('txt').value;
-      if (!txt) { return; }
-
-      const blob = new Blob([txt], { type: 'text/plain' });
-
-      const a = document.createElement('a');
-      a.href =  URL.createObjectURL(blob);
-      a.download = 'sample.txt';
-      a.click();
-    };
-  </script>
 </head>
 <body>
-  <input type="file" id="selfile" onchange="selfile"><br>
-  <button onclick="save();">Save Text</button>
-  <br />
-    <textarea value="こんにちは" cols="38" rows="15" id="txt"></textarea>
-</body>
+<div class="area">
+<div contenteditable="true" class="textarea">
+</div>
+</div>
+</body></html>
