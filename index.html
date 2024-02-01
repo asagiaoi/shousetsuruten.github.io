@@ -36,7 +36,7 @@
 </div>
 <script>
   function copybutton(){
-    document.getElementsByClassName("textarea").value.select();
+    document.getElementsByClassName("textarea")[0].innerText.select();
     document.execCommand("copy");
   }
 </script>
