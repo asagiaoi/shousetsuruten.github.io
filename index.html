@@ -29,14 +29,15 @@
   </style>
 </head>
 <body>
-  <input type="button" onclick="copybutton()"/>
+  <input type="button" onclick="copybutton()" value="コピー"/>
 <div class="area">
 <div contenteditable="true" class="textarea"　results="0">
 </div>
 </div>
 <script>
   function copybutton(){
-    document.getElementsByClassName("textarea")[0].innerText.select();
+    let copytext = document.getElementsByClassName("textarea")[0].innerText;
+    copytext.select();
     document.execCommand("copy");
   }
 </script>
