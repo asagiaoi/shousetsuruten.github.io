@@ -3,8 +3,8 @@
   <title>小説用</title>
   <style>
     *{
-      background: white;
-      color: black;
+      background: #778899;
+      color: #FFFFDD;
       -webkit-writing-mode: vertical-rl;
     }
 
@@ -12,24 +12,32 @@
       font-family: serif;
       font-size: 20px;
       font-family: serif;
-      border: 1px solid black;
+      border: 1px solid #cacaca;
     }
     .area{
-      border: 1px solid black;
+      border: 1px solid #cacaca;
       outline: 0;
       height: 40em;
     }
 
     .textarea{
-      background: white;
+      background: #778899	;
       height:20em;
       font-size: 2em;
-      line-height: 1em;
+      line-height: 1.25em;
       font-family: serif;
       padding: 0;
       outline: 0;
+      background-image: linear-gradient(0deg, transparent 0.95em, #BBBBBB	1em), linear-gradient(90deg,  #BBBBBB 0.09em, transparent -0.5em);
+      background-size: 1.25em 1em;
+      background-position: 1.25em 2em;
     }
     @page { size:landscape; }
+
+    *::-webkit-scrollbar{
+      display: none;
+    }
+
 
   </style>
 </head>
